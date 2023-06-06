@@ -10,8 +10,51 @@
     
 
     <script>
-        let yourName = prompt("Hãy nhập tên của bạn");
-        alert("Xin chào " + yourName);
+        //nhúng js
+            <button type="button" onclick="showMessage();">Click Me!</button>
+                function showMessage(){
+                    alert('Xin chào!');
+            }
+
+        //bài 1
+            let i = 10
+            let f = 20.5
+            let d = true
+            let s = 'Hà Nội'
+
+            document.write('i = ' + i)
+            document.write('<br/>')
+            document.write('f = ' + f)
+            document.write('<br/>')
+            document.write('d = ' + d)
+            document.write('<br/>')
+            document.write('s = ' + s)
+        //bài 2
+            let width = 20
+            let height = 10
+            let area = width * height
+            document.write('Area = ' + area)
+        //bài 3
+            let a = prompt('nhập số đầu');
+            let b = prompt('nhập số hai');
+            if ( a % b ) {
+                alert(' a không chia hết cho b')
+            }else {
+                alert (' a có chia hết cho b')
+            }
+        
+        //sử dụng toán tử
+            let inputWidth;
+            let inputHeight;
+            inputWidth = prompt("Enter the width");
+            inputHeight = prompt("Enter the height");
+
+            let widthi = parseInt(inputWidth);
+            let heighti = parseInt(inputHeight);
+
+            let areai = width * height;
+                document.write("The area is: " + areai);
+
     </script>
 </body>
 </html>
