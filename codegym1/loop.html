@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Giá hoa quả</h2>
+    <input type="text" id="fruit">
+    <button onclick="check()">Xem giá</button>
+    <p id="result"></p>
+
+    <script>
+        function check() {
+            let a = document.getElementById("fruit").value;
+            switch (a) {
+                case (a = "ổi"):
+                case (a = "Dưa hấu"):
+                    result = "20.000đ / 1kg";
+                    break;
+                case (a = "Táo"):
+                case (a = "Xoài"):
+                    result = "30.000đ / 1kg";
+                    break;
+                case (a = "Cam"):
+                case (a = "Chôm Chôm"):
+                    result = "40.000đ / 1kg";
+                    break;
+                case (a = "Măng Cụt"):
+                    result = "50.000đ / 1kg";
+                    break;
+                default:
+                    result = "không có";
+                    break;
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
