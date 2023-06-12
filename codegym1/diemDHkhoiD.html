@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<br>
+    <h2>Tính Điểm ĐH khối D</h2>
+    <p>Môn Toán</p><input type="text" id="Math">
+    <p>Môn Văn</p><input type="text" id="literature">
+    <p>Môn Anh</p><input type="text" id="English">
+</br>
+</br>
+
+    <span>Khu vực</span>
+    <select name="" id="kv">
+        <option value="0.75">KV1</option>
+        <option value="0.5">KV2</option>
+        <option value="0.25">KV2-NT</option>
+        <option value="0">KV3</option>
+    </select>
+</br>
+</br>
+
+    <button onclick="check()">Tính Điểm</button>
+    <p id="result"></p>
+
+    <script>
+        function check() {
+            let a = +document.getElementById("Math").value;
+            let b = +document.getElementById("literature").value;
+            let c = +document.getElementById("English").value;
+            let d = +document.getElementById("kv").value;
+            switch (d) {
+                case 0.75:
+                    result = a + b + c + 0.75;
+                    break;
+                case 0.5:
+                    result = a + b + c + 0.5;
+                    break;
+                case 0.25:
+                    result = a + b + c + 0.25;
+                    break;
+                default:
+                    result = a + b + c;
+                    break;
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

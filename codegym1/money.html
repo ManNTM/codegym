@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <span>Amount</span>
+        <input type="number" id="quantity">
+    </div>
+</br>
+    <div>
+        <span>From Currency</span>
+        <select id="Kv1">
+            <option value="23000">Việt</option>
+            <option value="1">Mỹ</option>
+            <option value="160">Nhật</option>
+        </select>
+    </div>
+</br>
+    <div>
+        <span>To Currency</span>
+        <select name="" id="Kv2">
+            <option value="23000">VND</option>
+            <option value="1">Dollar</option>
+            <option value="160">Yên</option>
+        </select>
+    </div>
+</br>
+    <button onclick="Convert()" style="background-color: rgb(187, 210, 255);">Convert</button>
+    <p id="kq"></p>
+    <script>
+        function Convert() {
+            let a = +document.getElementById("quantity").value;
+            let b = +document.getElementById("Kv1").value;
+            let c = +document.getElementById("Kv2").value;
+            result = (a * c) / b;
+            
+            document.getElementById("kq").innerHTML = result;
+        }
+
+    </script>
+</body>
+</html>

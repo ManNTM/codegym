@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="number1">
+    <input type="number" id="number2">
+    <p id="kq">0</p>
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('x')">x</button>
+    <button onclick="calculate('/')">/</button>
+
+    <script>
+        function calculate(operator) {
+            let a = +document.getElementById("number1").value;
+            let b = +document.getElementById("number2").value;
+            let result;
+
+            switch (operator) {
+                case "+":
+                    result = a + b;
+                    break;
+                case "-":
+                    result = a - b;
+                    break;
+                case "x":
+                    result = a * b;
+                    break;
+                case "/":
+                    result = a / b;
+                    break;
+            }
+        }
+        document.getElementById("kq").innerText = result;
+    </script>
+</body>
+</html>

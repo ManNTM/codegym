@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Tính năm âm lịch</h2>
+    <input type="number" id="year" ><button onclick="check()">tính năm</button>
+    <p id="kq"></p>
+
+    <script>
+        function check() {
+            let can;
+            let chi;
+            let a = +prompt("Nhập năm dương");
+                switch (a % 10) {
+                    case 0:
+                        can = "canh";
+                        break;
+                    case 1:
+                        can = "tân";
+                        break;
+                    case 2:
+                        can = "nhâm";
+                        break;
+                    case 3:
+                        can = "quý";
+                        break;
+                    case 4:
+                        can = "giáp";
+                        break;
+                    case 5:
+                        can = "ất";
+                        break;
+                    case 6:
+                        can = "bính";
+                        break;
+                    case 7:
+                        can = "đinh";
+                        break;
+                    case 8:
+                        can = "mậu";
+                        break;
+                    case 9:
+                        can = "kỷ";
+                        break;
+                    case 10:
+                        can = "canh";
+                        break;
+                    default:
+                        can = "sai"
+                }
+                switch (a % 12) {
+                    case 0:
+                        chi = "thân";
+                        break;
+                    case 1:
+                        chi = "dậu";
+                        break;
+                    case 2:
+                        chi = "tuất";
+                        break;
+                    case 3:
+                        chi = "hợi";
+                        break;
+                    case 4:
+                        chi = "tý";
+                        break;
+                    case 5:
+                        chi = "sỉu";
+                        break;
+                    case 6:
+                        chi = "dần";
+                        break;
+                    case 7:
+                        chi = "mão";
+                        break;
+                    case 8:
+                        chi = "thìn";
+                        break;
+                    case 9:
+                        chi = "tị";
+                        break;
+                    case 10:
+                        chi = "ngọ";
+                        break;
+                    case 11:
+                        chi = "mùi";
+                        break;
+                    default:
+                        chi = "sai"
+            }
+            alert(can + " " + chi);
+        } 
+        check();
+    </script>
+</body>
+</html>

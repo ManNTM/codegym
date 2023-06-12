@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="day"> <button onclick="check()">Tính số ngày</button>
+    <p id="kq"></p>
+
+    <script>
+        function check() {
+            let results;
+            var a = parseInt(prompt("Nhập tháng (1-12):"));
+            switch (a) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    results = 31;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    results = 30;
+                    break;
+                case 2:
+                    results = "28 hoặc 29";
+                    break;
+                default:
+                    results = "Không hợp lệ"
+            }
+            document.write(` Tháng ${a} có ${results} ngày`);
+
+        
+        // var month = parseInt(prompt("Nhập tháng (1-12):")); // số nguyên: 123abc -> 123; abc123 -> NaN
+        
+        // let days;
+        // switch (month) {
+        //     case 1:
+        //     case 3:
+        //     case 5:
+        //     case 7:
+        //     case 8:
+        //     case 10:
+        //     case 12:
+        //         days = 31;
+        //         break;
+
+        //     case 2:
+        //         days = "28 hoặc 29";
+        //         break;
+
+        //     case 4:
+        //     case 6:
+        //     case 9:
+        //     case 11:
+        //         days = 30;
+        //         break;
+
+        //     default:
+        //         days = "không hợp lệ";13
+        // }
+
+        // document.write(`Tháng ${month} có ${days} ngày.`);
+
+        }
+
+    </script>
+</body>
+</html>
